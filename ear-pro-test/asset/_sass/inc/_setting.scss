@@ -1,0 +1,59 @@
+@charset 'UTF-8';
+
+// -----------------------------------
+//  Layout Settings
+//------------------------------------
+
+// ブレークポイント
+@mixin mq($breakpoint) {
+  @media screen and(min-width: $breakpoint) {
+    @content;
+  }
+}
+$sp: 425px;
+$tab: 768px;
+$lap: 1024px;
+$l-lap: 1440px;
+
+//====================================
+//  Color Setings
+//====================================
+
+// ベースカラー
+$main-color: #30373f;
+
+// サブカラー
+$sub-color: #121314;
+
+//　アクセントカラー
+$accent-color: #e53537;
+
+// テキストの色
+$primary-text-color: #fff;
+
+// セカンダリーカラー
+$secondary-text-color: #e5edef;
+
+// 補足などの色
+$hint-text-color: #262c32;
+
+// 背景色
+$bgcC: #ebebe8;
+
+//====================================
+//  Typeface
+//====================================
+
+//$font-set-primary : set-font-family(1) !default;
+$font-set-primary: Quicksand, "Noto Sans Japanese", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic",
+  "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, sans-serif;
+
+// 1 : Roboto, Noto sans
+// 2 : Quicksand, 游ゴシック
+// 3 : Open Sans, Noto sans
+// 4 : Lato, Noto sans
+// 5 : Roboto, 游ゴシック
+// 6 : Quicksand, Noto sans
+// 7 : Noto Sans
+
+$base-font-size: 16px;

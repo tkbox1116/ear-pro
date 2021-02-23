@@ -1,0 +1,30 @@
+.l-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.logo img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  left: 15%;
+  width: 98px;
+}
+
+.l-global-nav {
+  margin: 0 auto;
+  padding: 1.5rem 0;
+
+  background-color: #222324;
+  @include mq($tab) {
+    padding: 3rem 0;
+  }
+
+  &__a {
+    padding: 0 1rem;
+    color: $primary-text-color;
+    text-decoration: none;
+  }
+}

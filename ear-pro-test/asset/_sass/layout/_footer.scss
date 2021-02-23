@@ -1,0 +1,141 @@
+.footer {
+  background-color: $sub-color;
+  color: #959595;
+
+  a {
+    color: #959595;
+    text-decoration: none;
+  }
+
+  &-logo {
+    margin-bottom: 1rem;
+    @include mq($tab) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-paragraph {
+    margin-bottom: 1rem;
+    @include mq($tab) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-email1 {
+    margin-bottom: 1rem;
+    @include mq($tab) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &-email2 {
+    @include mq($tab) {
+    }
+  }
+
+  &-email3 {
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
+
+.l-footer-email {
+  border-bottom: 1px solid #959595;
+  padding-bottom: 1rem;
+  @include mq($tab) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer-container {
+  padding: 3rem 0;
+  margin: 0 auto;
+  max-width: 1410px;
+  width: 85%;
+  @include mq($tab) {
+    padding: 4.5rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer-block {
+  &__title {
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 1rem;
+    display: block;
+    cursor: pointer;
+    @include mq($tab) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  ul {
+    display: none;
+    @include mq($tab) {
+      display: block;
+    }
+  }
+
+  &__li:not(:last-child) {
+    margin-bottom: 0.75rem;
+    @include mq($tab) {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.footer-container .footer-block:not(:last-child) {
+  margin-bottom: 2rem;
+  @include mq($tab) {
+    margin-right: 1.5rem;
+  }
+}
+
+.l-footer-base {
+  margin: 0 auto;
+  max-width: 1410px;
+  width: 85%;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 1rem 0;
+
+  @include mq($tab) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer-base__ul {
+  display: flex;
+
+  li:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.arrow {
+  position: relative;
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    top: 8px;
+    background-color: #959595;
+  }
+
+  &::after {
+    top: 5px;
+    background-color: $sub-color;
+  }
+}

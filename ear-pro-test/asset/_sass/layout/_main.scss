@@ -1,0 +1,383 @@
+h2 {
+  font-size: 1.75rem;
+  @include mq($tab) {
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  font-weight: normal;
+}
+.flex {
+  display: flex;
+
+  &.-j-center {
+    justify-content: center;
+  }
+}
+
+.main-visual {
+  position: relative;
+  background-image: url(/asset/images/main-visual@2x.jpg);
+  height: 100vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  padding-top: 4.5rem;
+  @include mq($tab) {
+    padding-top: 7.5rem;
+  }
+}
+
+.main-copy {
+  position: absolute;
+  color: $primary-text-color;
+  left: 15%;
+  top: 40%;
+
+  &__a {
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    display: block;
+
+    @include mq($tab) {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__b {
+    font-style: normal;
+    letter-spacing: 0.07rem;
+    font-size: 2.5rem;
+    display: block;
+    line-height: 1;
+
+    @include mq($tab) {
+      font-size: 4.375rem;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &__c {
+    letter-spacing: 0.05rem;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    @include mq($tab) {
+      font-size: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+  }
+}
+
+.product {
+  padding: 3rem 0;
+  @include mq($tab) {
+    padding: 6.25rem 0;
+  }
+}
+
+.product-h2 {
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 1rem;
+
+  @include mq($tab) {
+    margin-bottom: 4.5rem;
+  }
+}
+
+.bgcA {
+  background-color: $secondary-text-color;
+}
+
+.bgcC {
+  background-color: $bgcC;
+}
+
+.card-container {
+  .c-card:not(:last-child) {
+    margin-bottom: 1.5rem;
+    @include mq($tab) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include mq($tab) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.card-container .c-card {
+  &.-primary:not(:last-child) {
+    @include mq($tab) {
+      margin-right: 2rem;
+    }
+  }
+}
+
+.c-card {
+  display: flex;
+  flex-direction: column-reverse;
+
+  &.-primary {
+    @include mq($tab) {
+      max-width: 380px;
+    }
+  }
+
+  &.-secondary {
+    @include mq($tab) {
+      max-width: 370px;
+    }
+  }
+
+  &__thumbnail {
+    text-align: center;
+    margin: 0 auto;
+
+    &.-primary {
+      margin-bottom: 1.5rem;
+      max-width: 140px;
+
+      @include mq($tab) {
+        max-width: 100%;
+      }
+    }
+
+    &.-secondary {
+      margin-bottom: 1rem;
+      @include mq($tab) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__title {
+    text-transform: lowercase;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+
+    span {
+      color: $accent-color;
+    }
+  }
+
+  &__name {
+    text-align: center;
+  }
+
+  &__paragraph {
+    @include mq($tab) {
+      margin-bottom: 3.5rem;
+    }
+  }
+}
+
+/*
+======
+c-card__bodyの最後だけ、マージンボトムを消すには
+どう記述したら良いのでしょうか？
+======
+*/
+
+.card-container .c-card__body {
+  &.-secondary:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.card-container .c-card__body {
+  &.-secondary:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.reason {
+  color: $secondary-text-color;
+  padding: 4rem 0;
+
+  @include mq($tab) {
+    padding: 12.5rem.0;
+  }
+}
+
+.bgcB {
+  background-color: $sub-color;
+}
+
+.reason-h2 {
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  @include mq($tab) {
+    margin-bottom: 5rem;
+  }
+}
+
+.reason-h2A {
+  color: $accent-color;
+}
+
+.reason-h2B {
+  color: $secondary-text-color;
+  font-size: 1.25rem;
+  display: block;
+
+  @include mq($tab) {
+    font-size: 0.875rem;
+  }
+}
+
+.reason-list {
+  @include mq($tab) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__inner {
+    @include mq($tab) {
+      margin-right: 2rem;
+    }
+  }
+}
+
+.reason-block {
+  @include mq($tab) {
+    display: flex;
+    align-items: center;
+    border: 1.5px dashed $secondary-text-color;
+    padding: 1rem;
+    border-radius: 70px;
+    max-width: 690px;
+  }
+
+  &.-reverse {
+    @include mq($tab) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &.-end {
+    @include mq($tab) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__inner {
+    max-width: 530px;
+  }
+
+  &.-sp-bottom {
+    margin-bottom: 2.5rem;
+    @include mq($tab) {
+      margin-bottom: 0;
+    }
+  }
+}
+// こちらも↓の方法でSP時に上手くマージンを作る事ができず、-sp-bottomというクラスを作ってしましました。
+
+.reason-list .reason-block:not(:last-child) {
+  @include mq($tab) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.reason-icon {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  background-color: $accent-color;
+  border-radius: 50%;
+  z-index: 0;
+  margin-bottom: 0.5rem;
+  @include mq($tab) {
+    width: 5.6rem;
+    height: 5.6rem;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background-image: url(/asset/images/timer@2x.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    @include mq($tab) {
+      width: 5.6rem;
+      height: 5.6rem;
+      line-height: 5.6rem;
+    }
+  }
+}
+
+// .reason-list__inner .reason-block .reason-icon:nth-child {
+//   @include mq($tab) {
+//     margin-right: 2rem;
+//   }
+// }
+
+// .reason-list__inner .reason-block .reason-icon:nth-child(even) {
+//   @include mq($tab) {
+//     margin-left: 2rem;
+//   }
+// }
+
+.customer {
+  padding: 3.5rem 0 5rem;
+  @include mq($tab) {
+    padding: 6.875rem 0 10rem;
+  }
+
+  &-h2 {
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 2rem;
+    @include mq($tab) {
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+.mi-ear {
+  padding: 3.5rem 0;
+  @include mq($tab) {
+    padding: 6.875rem 0;
+  }
+}
+
+.color {
+  position: relative;
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+  }
+
+  &::before {
+    background-color: $sub-color;
+    left: -40px;
+  }
+  &::after {
+    background-color: $secondary-text-color;
+    left: -77px;
+  }
+}
